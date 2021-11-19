@@ -12,7 +12,6 @@ function getConfig(flags) {
         return process.argv[aa[0] + 1]
     }
 
-
 }
 
 module.exports = {

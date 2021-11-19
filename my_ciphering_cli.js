@@ -7,6 +7,7 @@ const {checkDuplicateArguments} = require("./src/checks/checkDuplicateArguments"
 const {checkConfig} = require("./src/checks/checkConfig");
 const {getInputType} = require("./src/getInputType");
 const {getOutputType} = require("./src/getOutputType");
+const {checkNotConfig} = require("./src/checks/checkNotConfig");
 
 
 const config = getConfig(['-c', '--config']);
@@ -17,7 +18,7 @@ const outputFilePath = getConfig(['-o', '--output']);
 const input = getInputType(inputFilePath)
 const output = getOutputType(outputFilePath)
 
-
+checkNotConfig(config)
 checkDuplicateArguments()
 checkConfig(splitConfig(config))
 checkFileExists(inputFilePath)

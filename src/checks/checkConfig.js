@@ -1,7 +1,7 @@
 const {getRedColorText} = require("./getRedColorText");
 
 const errorExitProcess = () => {
-    process.stderr.write(getRedColorText(getRedColorText(`Wrong config`)))
+    process.stderr.write(getRedColorText(`Wrong config`))
     process.exit(9)
 
 }

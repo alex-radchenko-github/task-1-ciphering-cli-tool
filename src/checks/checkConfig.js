@@ -24,7 +24,7 @@ function checkConfig(config) {
         } else if (!allCiphers.includes(config[i])) {
             errorExitProcess()
         }
-
+//todo delete last check and check all
     }
 
 

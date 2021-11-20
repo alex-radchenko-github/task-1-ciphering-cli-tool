@@ -19,7 +19,7 @@ const input = getInputType(inputFilePath)
 const output = getOutputType(outputFilePath)
 
 checkNotConfig(config)
-checkDuplicateArguments()
+checkDuplicateArguments(!(Array.from(new Set(process.argv)).join("") === process.argv.join("")))
 checkConfig(splitConfig(config))
 checkFileExists(inputFilePath)
 checkFileExists(outputFilePath)

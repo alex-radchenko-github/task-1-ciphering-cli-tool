@@ -19,8 +19,8 @@ describe("checkNotConfig", () => {
     test('checkNotConfig - false', () => {
 
         const mockExit = jest.spyOn(process, 'exit').mockImplementation(() => {});
-        checkNotConfig('undefined');
-        expect(mockExit).not.toHaveBeenCalledWith(9);
+        checkNotConfig('A');
+        expect(mockExit).toBeCalledTimes(2);
     })
 
 

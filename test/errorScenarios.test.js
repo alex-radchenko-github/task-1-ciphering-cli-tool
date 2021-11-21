@@ -74,7 +74,7 @@ describe("error scenarios", () => {
     })
     test('5- wrong argument in config', () => {
 
-        const cp = spawn('node', ['my_ciphering_cli', '-c', 'C1-C1-R0-Aa', '-i', './input.txt', '-o', './output.txt']);
+        const cp = spawn('node', ['my_ciphering_cli', '-c', 'C1-C1-R0-M', '-i', './input.txt', '-o', './output.txt']);
 
         let res = '';
 

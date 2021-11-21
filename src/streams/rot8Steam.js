@@ -5,8 +5,7 @@ const {workFromConfig} = require('../workFromConfig.js')
 function rot8SteamCoder() {
     return new Transform({
         transform(chunk, encoding, callback) {
-            let str = chunk.toString().trim()
-            callback(null, workFromConfig("R1", str));
+            callback(null, workFromConfig("R1", chunk.toString().trim()));
         },
     });
 
@@ -15,8 +14,7 @@ function rot8SteamCoder() {
 function rot8SteamDecoder() {
     return new Transform({
         transform(chunk, encoding, callback) {
-            let str = chunk.toString().trim()
-            callback(null, workFromConfig("R0", str));
+            callback(null, workFromConfig("R0", chunk.toString().trim()));
         },
     });
 

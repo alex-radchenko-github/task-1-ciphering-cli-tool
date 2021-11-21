@@ -16,11 +16,6 @@
   },
   "dependencies": {
     "@jest/globals": "^27.3.1"
-  },
-
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.js"
-    ]
   }
+
 }

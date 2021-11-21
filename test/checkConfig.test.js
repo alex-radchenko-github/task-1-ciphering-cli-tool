@@ -8,10 +8,12 @@ test('checkConfig ', () => {
     expect(mockExit).toHaveBeenCalledWith(9);
 })
 
+
 test('checkConfig ', () => {
 
     const mockExit = jest.spyOn(process, 'exit').mockImplementation(() => {
     });
-    checkConfig('C');
-    expect(mockExit).toBeCalled();
+    checkConfig('A3');
+    expect(mockExit).toHaveBeenCalledWith(9);
+
 })
